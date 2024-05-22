@@ -145,7 +145,7 @@ class PrimeCheckerApp(QWidget):
 
         self.slider = QSlider(Qt.Horizontal, self)
         self.slider.setMinimum(0)
-        self.slider.setMaximum(10000)
+        self.slider.setMaximum(100000000)
         self.slider.setValue(0)
         self.slider.setTickInterval(1)
         self.slider.valueChanged.connect(self.update_entry)
@@ -193,22 +193,19 @@ class PrimeCheckerApp(QWidget):
     def check_prime(self):
         try:
             number = int(self.entry.text())
-            start_time = time.time()
 
             if is_prime(number):
                 result = "Yes"
             else:
                 result = "No"
 
-            end_time = time.time()
-            execution_time = end_time - start_time
 
             row_position = self.table.rowCount()
             self.table.insertRow(row_position)
             self.table.setItem(row_position, 0, QTableWidgetItem(str(number)))
             self.table.setItem(row_position, 1, QTableWidgetItem(result))
 
-            QMessageBox.information(self, 'Result', f"Checked number: {number}\nIs prime? {result}\nRunning time: {execution_time:.6f} seconds")
+            QMessageBox.information(self, 'Result', f"Checked number: {number}\nIs prime? {result}")
         except ValueError:
             QMessageBox.critical(self, 'Invalid Input', 'Please enter a valid integer.')
 

@@ -27,7 +27,7 @@ def sumEvenNum10To100():
             result = result + i 
     print(result)
 
-sumEvenNum10To100()
+# sumEvenNum10To100()
 
 def sumEvem(start, end):
     #  // استخدمنا هذه لانه عدد الحدود نريد عدد صحيح
@@ -36,7 +36,7 @@ def sumEvem(start, end):
     
     print(sum)
 
-start = 10
-end = 1000 
+start = 1425
+end = 1583545 
 
 sumEvem(start, end)
