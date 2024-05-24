@@ -1,16 +1,4 @@
-# def calculate_electricity_bill(units):
-#     bill = 0 
-#     if units <= 50 : 
-#         bill = units * 1
-        
-#     elif units <= 150 :
-#         bill = 50*1 + (units - 50)*1.5
-        
-#     else:
-#         bill = 50*1 + 100*1.5 + (units - 150)*2 
+
+    # elif (nationality == 3 or nationality == 2) and age >= 30 : 
+    #     return f"You must pay the installments, which are 5,000 liras" 
     
-
-# units_used = 345
-# total_bill = calculate_electricity_bill(units_used)
-# print("Total electricity bill = ", total_bill)
-
